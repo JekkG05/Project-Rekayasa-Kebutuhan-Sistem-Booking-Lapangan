@@ -1,0 +1,6 @@
+# Mengaktifkan modul rewrite
+RewriteEngine On
+
+# Memastikan server menerima permintaan POST
+RewriteCond %{REQUEST_METHOD} ^POST$
+RewriteRule ^(.*)$ $1 [L]

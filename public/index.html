@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenSport Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>GreenSport Booking</h1>
+            <p>Pesan Lapangan Olahraga Kamu, Mudah & Cepat!</p>
+            <a href="#form" class="cta-button">Pesan Sekarang</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>Tentang Kami</h2>
+            <p>GreenSport Booking adalah platform pemesanan lapangan olahraga terbaik di Indonesia. Kami menawarkan lapangan futsal, badminton, basket, tenis, dan banyak lagi dengan harga yang terjangkau dan fasilitas yang lengkap.</p>
+            <p>Jangan khawatir, hanya dalam beberapa langkah mudah, lapangan impianmu sudah bisa kamu booking secara online kapan saja, di mana saja!</p>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="form" class="booking-form">
+        <div class="container">
+            <h2>Pilih Lapangan Olahraga</h2>
+          <form id="bookingForm" action="backend/index.php" method="POST">
+    <label for="lapangan">Pilih Lapangan:</label>
+    <select id="lapangan" name="lapangan" required>
+        <option value="Futsal">Futsal</option>
+        <option value="Badminton">Badminton</option>
+        <option value="Basket">Basket</option>
+        <option value="Tenis">Tenis</option>
+    </select>
+
+    <label for="tanggal">Tanggal:</label>
+    <input type="date" id="tanggal" name="tanggal" required>
+
+    <label for="jam">Jam:</label>
+    <input type="time" id="jam" name="jam" required>
+
+    <button type="submit">Pesan Sekarang</button>
+</form>
+        </div>
+    </section>
+
+    <!-- Facility Section -->
+    <section class="facilities">
+        <div class="container">
+            <h2>Fasilitas Lapangan</h2>
+            <div class="facility-item">
+                <img src="images/lapangan-futsal.jpg" alt="Lapangan Futsal">
+                <h3>Lapangan Futsal</h3>
+                <p>Lapangan futsal terbaik dengan pencahayaan modern dan fasilitas lengkap.</p>
+                <p class="price">Rp 250.000</p>
+            </div>
+            <div class="facility-item">
+                <img src="images/lapangan-badminton.jpg" alt="Lapangan Badminton">
+                <h3>Lapangan Badminton</h3>
+                <p>Fasilitas lapangan badminton dengan kualitas terbaik dan ruang ganti nyaman.</p>
+                <p class="price">Rp 150.000</p>
+            </div>
+            <div class="facility-item">
+                <img src="images/lapangan-basket.jpg" alt="Lapangan Basket">
+                <h3>Lapangan Basket</h3>
+                <p>Lapangan basket standar internasional dengan perawatan rutin.</p>
+                <p class="price">Rp 200.000</p>
+            </div>
+            <div class="facility-item">
+                <img src="images/lapangan-tenis.jpg" alt="Lapangan Tenis">
+                <h3>Lapangan Tenis</h3>
+                <p>Lapangan tenis yang nyaman untuk profesional dan amatir.</p>
+                <p class="price">Rp 180.000</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GreenSport. Semua hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

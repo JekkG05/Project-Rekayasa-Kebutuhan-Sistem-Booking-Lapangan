@@ -1,0 +1,250 @@
+/* Resetting all the margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e9f5e3; /* Background color */
+    color: #333;
+}
+
+/* Main container for elements */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Black gradient overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+}
+
+/* About Section */
+.about {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Booking Form */
+.booking-form {
+    background-color: #ffffff;
+    padding: 50px 30px;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form h2 {
+    font-size: 2.5rem;
+    color: #28a745;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.booking-form label {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+    border-color: #28a745;
+}
+
+.booking-form button {
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.booking-form button:hover {
+    background-color: #218838;
+}
+
+/* Facility Section */
+.facilities {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* This will center the items horizontally */
+    gap: 30px; /* Space between items */
+    margin: 0 auto;
+}
+
+.facilities h2 {
+    font-size: 2.5rem;
+    color: #28a745;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.facility-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Set width to 45% to fit in two columns */
+    height: 700px; /* Set a fixed height */
+    min-width: 250px;
+    box-sizing: border-box; /* Ensures box includes padding */
+}
+
+.facility-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.facility-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.facility-item h3 {
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.facility-item p {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #666;
+}
+
+.facility-item .price {
+    font-size: 1.5rem;
+    color: #28a745;
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: 15px;
+    align-self: flex-end;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .facilities {
+        flex-direction: row; /* Two items per row */
+    }
+    .facility-item {
+        width: 48%; /* Adjust width to fit two items per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .facilities {
+        flex-direction: column; /* Stack items in one column on mobile */
+    }
+    .facility-item {
+        width: 90%; /* Take up 90% of the container width on mobile */
+    }
+    .facility-item img {
+        height: 180px; /* Adjust image height for mobile */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 1rem;
+}
